@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}View{% endblock %}
+{% block body %}
+<div class="container my-2">
+	<a href="/" class="btn btn-warning m-2">Back to the Main-page</a>
+  	<div class="card mb-3">
+  	  <div class="row no-gutters">
+    	<div class="col-md-4">
+  			<img src="{{event.image}}" class="card-img">
+		</div>
+		<div class="col-md-8">
+      	  <div class="card-body">
+			<h2 class="card-title">{{event.name}}</h2>
+      		<p class="card-text">{{event.description}}</p>
+      		<p class="card-text"><strong>Date and time:</strong> {{event.eventDateTime|date('F j, Y, g:i a')}}</p>
+      		<p class="card-text"><strong>Type of event:</strong> {{event.eventType}}</p>
+      		<p class="card-text"><strong>Capacity:</strong> {{event.capacity}}</p>
+      		<p class="card-text"><strong>Address:</strong> {{event.address}}</p>
+      		<p class="card-text"><strong>Contact via phone </strong> {{event.phone}} <strong> or via email </strong> {{event.email}}</p>
+      		<p class="card-text">For more information visit the webpage: {{event.webpage}}</p>
+   		  </div>
+  		</div>
+	  </div>
+	</div>
+</div>
+	
+{% endblock %}
